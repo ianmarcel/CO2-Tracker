@@ -3,18 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="/styles/aguardando.css">
     <title>Aguardando Resultados</title>
     <script>
         setTimeout(function(){
             window.location.href = "/pages/resultados.html";
-        }, 5000); // Redireciona após 5 segundos
+        }, 4000); // Redireciona após 5 segundos
     </script>
 </head>
 <body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="/pages/index.html"><img src="/images/logo_2.jpeg" alt="logo"></a>
+            <a href="/pages/calculadoraCo2.html">Calculadora CO2</a>
+            <a href="/pages/sobreNos.html">Missão, Visão e Valores</a>
+        </nav>
+    </header>
+
     <div class="loading-container">
         <div class="spinner"></div>
-        <h2>... Estamos Processando os Resultados..Logo os mostraremos.</h2>
+        <h1>Calculando...</h1>
+        <p>Estamos processando os resultados... Logo os mostraremos. ;)</p>
     </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Co2Plus | Todos os direitos reservados. | Licença Acadêmica</p>
+    </footer>
 </body>
 </html>

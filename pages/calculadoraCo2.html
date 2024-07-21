@@ -27,8 +27,8 @@
                     <option value="0.00231">Carro a gasolina (motor até 1.4)</option>
                 </select>
                 <label for="km">Insira a Media de Kilometros percorridos por mes do seu Carro:</label>
-                <input type="number" id="km" placeholder="Digite a km/mês">
-                <div class="result">
+                <input type="number" id="km" placeholder="Digite a km/mês" required>
+                <div class="result" style="display:none;">
                     <p>Resultado CO2/mês: <span id="resultKmMes"></span></p>
                     <p>Resultado CO2/ano: <span id="resultKmAno"></span></p>
                 </div>
@@ -36,8 +36,8 @@
             <section class="calculator-section">
                 <h2>Emissão de CO2 por consumo de energia elétrica</h2>
                 <label for="energia">Seu consumo de energia mensal:</label>
-                <input type="number" id="energia" placeholder="Digite consumo de energia">
-                <div class="result">
+                <input type="number" id="energia" placeholder="Digite consumo de energia" required>
+                <div class="result" style="display:none;">
                     <p>Resultado CO2/mês: <span id="resultEnergiaMes"></span></p>
                     <p>Resultado CO2/ano: <span id="resultEnergiaAno"></span></p>
                 </div>
@@ -45,15 +45,15 @@
             <section class="calculator-section">
                 <h2>Emissão de CO2 por consumo de gás de cozinha</h2>
                 <label for="gas">Seu Consumo de gás Mensal:</label>
-                <input type="number" id="gas" placeholder="Digite consumo de gás">
-                <div class="result">
+                <input type="number" id="gas" placeholder="Digite consumo de gás" required >
+                <div class="result" style="display:none;">
                     <p>Resultado CO2/mês: <span id="resultGasMes"></span></p>
                     <p>Resultado CO2/ano: <span id="resultGasAno"></span></p>
                 </div>
             </section>
             <button type="submit" class="calculate-btn">Confirmar</button>
         </form>
-        <section class="total-section">
+        <section class="total-section" style="display: none;">
             <h2>Emissão de total CO2</h2>
             <p>Resultado CO2/mês: <span id="resultTotalMes"></span></p>
             <p>Resultado CO2/ano: <span id="resultTotalAno"></span></p>

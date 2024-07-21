@@ -52,5 +52,5 @@ document.getElementById('formulario').addEventListener("submit", (e) => {
     localStorage.setItem('resultTotalMes', resultados.totalMes);
     localStorage.setItem('resultTotalAno', resultados.totalAno);
     
-    window.location.href = "/pages/resultados.html";
+    window.location.href = "/pages/aguardandoResultados.html";
 });
