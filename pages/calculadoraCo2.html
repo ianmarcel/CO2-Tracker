@@ -22,12 +22,20 @@
         <form id="formulario" method="post">
             <section class="calculator-section">
                 <h2>Emissão de CO2 por consumo de combustível</h2>
-                <label for="veiculo">Selecione o veículo que usa no seu cotidiano:</label>
+                <br>
+                <label for="veiculo">Selecione o veículo que você usa no seu cotidiano:</label>
                 <select id="veiculo">
                     <option value="0.00231">Carro a gasolina (motor até 1.4)</option>
+                    <option value="0.00268">Carro a gasolina (motor acima de 1.4)</option>
+                    <option value="0.00268">Carro a diesel (motor até 1.4)</option>
+                    <option value="0.00295">Carro a diesel (motor acima de 1.4)</option>
+                    <option value="0.0012">Carro híbrido</option>
+                    <option value="0.0004">Carro elétrico</option>
+                    <option value="0.00172">Moto</option>
                 </select>
-                <label for="km">Insira a Media de Kilometros percorridos por mes do seu Carro:</label>
-                <input type="number" id="km" placeholder="Digite a km/mês" required>
+                
+                <label for="km">Média de Quilômetros percorridos por mês do seu veiculo:</label>
+                <input type="number" id="km" placeholder="Digite os km/mês" min="0"  required>
                 <div class="result" style="display:none;">
                     <p>Resultado CO2/mês: <span id="resultKmMes"></span></p>
                     <p>Resultado CO2/ano: <span id="resultKmAno"></span></p>
@@ -35,8 +43,9 @@
             </section>
             <section class="calculator-section">
                 <h2>Emissão de CO2 por consumo de energia elétrica</h2>
+                <br>
                 <label for="energia">Seu consumo de energia mensal:</label>
-                <input type="number" id="energia" placeholder="Digite consumo de energia" required>
+                <input type="number" id="energia" placeholder="Digite consumo de energia (kwh)"  min="0"  required>
                 <div class="result" style="display:none;">
                     <p>Resultado CO2/mês: <span id="resultEnergiaMes"></span></p>
                     <p>Resultado CO2/ano: <span id="resultEnergiaAno"></span></p>
@@ -44,9 +53,10 @@
             </section>
             <section class="calculator-section">
                 <h2>Emissão de CO2 por consumo de gás de cozinha</h2>
+                <br>
                 <label for="gas">Seu Consumo de gás Mensal:</label>
-                <input type="number" id="gas" placeholder="Digite consumo de gás" required >
-                <div class="result" style="display:none;">
+                <input type="number" id="gas" placeholder="Digite consumo de gás (m³)"  min="0" required >
+                <div class="result" style="display:none">
                     <p>Resultado CO2/mês: <span id="resultGasMes"></span></p>
                     <p>Resultado CO2/ano: <span id="resultGasAno"></span></p>
                 </div>

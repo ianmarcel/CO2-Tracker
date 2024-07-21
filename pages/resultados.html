@@ -21,15 +21,17 @@
         <div class="resultado">
             <p>Resultado CO2/mês: <span id="resultTotalMes"></span></p>
             <p>Resultado CO2/ano: <span id="resultTotalAno"></span></p>
-            <br>
-            <p>Media CO2/mês Brasil: <span id="resultTotalAno">7.84</span></p>
-
         </div>
         
-        <p class="agradecimento">Muito obrigado por usar nosso site! Hoje é muito importante que cada um de nós esteja ciente do impacto que causamos no meio ambiente.</p>
+        <p class="agradecimento">Muito obrigado por usar nosso site! Hoje é muito importante que cada um de nós esteja ciente do impacto que causamos no meio ambiente. É encorajador ver mais pessoas preocupadas com a sustentabilidade e trabalhando para reduzir suas emissões de CO2.</p>
+        
+        <div id="compensacao" class="compensacao">
+            <h2>Para compensar sua emissão anual de CO2, você precisará plantar:</h2>
+            <p><strong><span id="numMudas"></span> mudas de árvores</strong></p>
+        </div>
         
         <div class="tabela">
-            <h2>Cálculo efetuado, obrigado por usar nossa calculadora. Aqui estão algumas informações que você pode achar úteis:</h2>
+            <h2>Aqui estão algumas informações que você pode achar úteis:</h2>
             <h1>Média da emissão de CO₂ per capita em alguns países</h1>
             <table border="1">
                 <tr>
@@ -89,9 +91,9 @@
             </table>
         </div>
         
-        <div class="video">
+        <div class="video" style="display: none;">
             <h2>Caso você tenha ficado acima da média, temos alguns vídeos que podem te ajudar a reduzir sua produção de gás carbônico:</h2>
-            <button id="saibaMaisBtn">Saiba mais</button>
+            <button id="saibaMaisBtn" style>Saiba mais</button>
             <div id="videosContainer" class="videos-container" hidden>
                 <iframe src="https://www.youtube.com/embed/HnMsqXrKBnk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <iframe src="https://www.youtube.com/embed/soY-NL-iT98" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -104,7 +106,23 @@
         <p>&copy; 2024 Co2Plus | Todos os direitos reservados. | Licença Acadêmica</p>
     </footer>
 
-    <script src="/scripts/resultado.js"></script>
+    <script>
+        document.getElementById('saibaMaisBtn').addEventListener('click', function() {
+            const videosContainer = document.getElementById('videosContainer');
+            videosContainer.hidden = !videosContainer.hidden;
+            this.innerText = videosContainer.hidden ? 'Saiba mais' : 'Mostrar menos';
+        });
 
+        // Carregar os resultados do localStorage
+        const resultTotalMes = parseFloat(localStorage.getItem('resultTotalMes'));
+        const resultTotalAno = parseFloat(localStorage.getItem('resultTotalAno'));
+        document.getElementById('resultTotalMes').innerText = resultTotalMes.toFixed(2);
+        document.getElementById('resultTotalAno').innerText = resultTotalAno.toFixed(2);
+
+        // Calcular quantas mudas são necessárias
+        const CO2_POR_ARVORE = 22; // kg de CO2 por ano por árvore
+        const numMudas = Math.ceil(resultTotalAno / CO2_POR_ARVORE);
+        document.getElementById('numMudas').innerText = numMudas;
+    </script>
 </body>
 </html>

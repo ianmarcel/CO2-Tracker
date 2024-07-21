@@ -49,7 +49,7 @@ body {
 
 /* Main Container */
 .container {
-    max-width: 800px;
+    max-width: 700px;
     margin: 100px auto 0;
     padding: 20px;
     background-color: white;
@@ -64,6 +64,7 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 36px;
+    color: #4CAF50;
 }
 
 .calculator-section {
@@ -73,6 +74,15 @@ h1 {
 .calculator-section h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+.calculator-section:nth-child(odd) {
+    background-color: #e0f7fa; /* Light cyan for odd sections */
+}
+
+.calculator-section:nth-child(even) {
+    background-color: #e8f5e9; /* Light green for even sections */
 }
 
 label {

@@ -122,6 +122,10 @@ p {
     color: #007bff;
 }
 
+.tabela h2{
+    background-color: #f8f9fa;
+
+}
 .video {
     margin-top: 30px;
 }
@@ -129,6 +133,16 @@ p {
 .video h2 {
     font-size: 24px;
     color: #6c757d;
+}
+
+.compensacao {
+    background-color: #c8e6c9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2e7d32;
 }
 
 button#saibaMaisBtn {
@@ -165,7 +179,7 @@ button#saibaMaisBtn:hover {
     color: white;
     text-align: center;
     padding: 20px 0;
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     bottom: 0;
     z-index: 1000;
