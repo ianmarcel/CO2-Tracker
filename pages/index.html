@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/index.css">
+    <title>Calcule sua Emissão de CO2</title>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="/pages/index.html"><img src="/images/logo_2.jpeg" alt="logo"></a>
+            <a href="/pages/calculadoraCo2.html">Calculadora CO2</a>
+            <a href="/pages/sobreNos.html">Missão, Visão e Valores</a>
+        </nav>
+    </header>
+
+    <div class="pagina">
+        <a href="/pages/calculadoraCo2.html"><h1>Descubra Sua Emissão de CO2</h1></a> 
+        <!-- <a href="#pagina2"><img src="/images/down_arrow.png" alt="Seta para baixo"></a> -->
+    </div>
+
+    <div id="pagina2" class="pagina2">
+        <h1>O consumo de CO2</h1>
+        <p>Entenda como suas atividades diárias impactam o meio ambiente e descubra maneiras de reduzir sua pegada de carbono.</p>
+        <img src="/images/pagina2.jpg" alt="Impacto do CO2">
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Co2Plus | Todos os direitos reservados. | Licença Acadêmica</p>
+    </footer>
+
+    <script>
+        // Suavização da rolagem para âncoras
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

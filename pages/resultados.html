@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="/styles/resultados.css">
+    <title>Resultados</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="/pages/index.html"><img src="/images/logo_2.jpeg" alt="logo"></a>
+            <a href="/pages/calculadoraCo2.html">Calculadora CO2</a>
+            <a href="/pages/sobreNos.html">Missão, Visão e Valores</a>
+        </nav>
+    </header>
+
+    <div class="result-container">
+        <h1>Resultados de Emissão de CO2</h1>
+        <div class="resultado">
+            <p>Resultado CO2/mês: <span id="resultTotalMes"></span></p>
+            <p>Resultado CO2/ano: <span id="resultTotalAno"></span></p>
+            <br>
+            <p>Media CO2/mês Brasil: <span id="resultTotalAno">7.84</span></p>
+
+        </div>
+        
+        <p class="agradecimento">Muito obrigado por usar nosso site! Hoje é muito importante que cada um de nós esteja ciente do impacto que causamos no meio ambiente.</p>
+        
+        <div class="tabela">
+            <h2>Cálculo efetuado, obrigado por usar nossa calculadora. Aqui estão algumas informações que você pode achar úteis:</h2>
+            <h1>Média da emissão de CO₂ per capita em alguns países</h1>
+            <table border="1">
+                <tr>
+                    <th>Países</th>
+                    <th class="br"><strong>Brasil</strong></th>
+                    <th>EUA</th>
+                    <th>Canadá</th>
+                    <th>Rússia</th>
+                    <th>Arábia Saudita</th>
+                    <th>Coréia do Sul</th>
+                    <th>Argentina</th>
+                    <th>África do Sul</th>
+                    <th>China</th>
+                </tr>
+                <tr>
+                    <td>Emissão per capita por ano</td>
+                    <td class="bra"><strong>7.85</strong></td>
+                    <td>27.31</td>
+                    <td>21.73</td>
+                    <td>18.14</td>
+                    <td>17.8</td>
+                    <td>12.52</td>
+                    <td>9.28</td>
+                    <td>8.61</td>
+                    <td>8.24</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="tabela">
+            <h1>Principais Emissores de CO2 por Setor</h1>
+            <table border="1">
+                <tr>
+                    <th>Setor</th>
+                    <th>Porcentagem das Emissões Globais</th>
+                </tr>
+                <tr>
+                    <td>Transporte</td>
+                    <td>23%</td>
+                </tr>
+                <tr>
+                    <td>Indústria</td>
+                    <td>19%</td>
+                </tr>
+                <tr>
+                    <td>Eletricidade e Aquecimento</td>
+                    <td>44%</td>
+                </tr>
+                <tr>
+                    <td>Residencial e Comercial</td>
+                    <td>8%</td>
+                </tr>
+                <tr>
+                    <td>Agricultura</td>
+                    <td>6%</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="video">
+            <h2>Caso você tenha ficado acima da média, temos alguns vídeos que podem te ajudar a reduzir sua produção de gás carbônico:</h2>
+            <button id="saibaMaisBtn">Saiba mais</button>
+            <div id="videosContainer" class="videos-container" hidden>
+                <iframe src="https://www.youtube.com/embed/HnMsqXrKBnk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/soY-NL-iT98" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/4bcBifYGLgk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Co2Plus | Todos os direitos reservados. | Licença Acadêmica</p>
+    </footer>
+
+    <script src="/scripts/resultado.js"></script>
+
+</body>
+</html>

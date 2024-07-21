@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="/styles/calculadoraCo2.css">
+    <title>Calculadora de CO2</title>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="/pages/index.html"><img src="/images/logo_2.jpeg" alt="logo"></a>
+            <a href="/pages/calculadoraCo2.html">Calculadora CO2</a>
+            <a href="/pages/sobreNos.html">Missão, Visão e Valores</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Calculadora de CO2</h1>
+        <form id="formulario" method="post">
+            <section class="calculator-section">
+                <h2>Emissão de CO2 por consumo de combustível</h2>
+                <label for="veiculo">Selecione o veículo que usa no seu cotidiano:</label>
+                <select id="veiculo">
+                    <option value="0.00231">Carro a gasolina (motor até 1.4)</option>
+                </select>
+                <label for="km">Insira a Media de Kilometros percorridos por mes do seu Carro:</label>
+                <input type="number" id="km" placeholder="Digite a km/mês">
+                <div class="result">
+                    <p>Resultado CO2/mês: <span id="resultKmMes"></span></p>
+                    <p>Resultado CO2/ano: <span id="resultKmAno"></span></p>
+                </div>
+            </section>
+            <section class="calculator-section">
+                <h2>Emissão de CO2 por consumo de energia elétrica</h2>
+                <label for="energia">Seu consumo de energia mensal:</label>
+                <input type="number" id="energia" placeholder="Digite consumo de energia">
+                <div class="result">
+                    <p>Resultado CO2/mês: <span id="resultEnergiaMes"></span></p>
+                    <p>Resultado CO2/ano: <span id="resultEnergiaAno"></span></p>
+                </div>
+            </section>
+            <section class="calculator-section">
+                <h2>Emissão de CO2 por consumo de gás de cozinha</h2>
+                <label for="gas">Seu Consumo de gás Mensal:</label>
+                <input type="number" id="gas" placeholder="Digite consumo de gás">
+                <div class="result">
+                    <p>Resultado CO2/mês: <span id="resultGasMes"></span></p>
+                    <p>Resultado CO2/ano: <span id="resultGasAno"></span></p>
+                </div>
+            </section>
+            <button type="submit" class="calculate-btn">Confirmar</button>
+        </form>
+        <section class="total-section">
+            <h2>Emissão de total CO2</h2>
+            <p>Resultado CO2/mês: <span id="resultTotalMes"></span></p>
+            <p>Resultado CO2/ano: <span id="resultTotalAno"></span></p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Co2Plus | Todos os direitos reservados. | Licença Acadêmica</p>
+    </footer>
+
+    <script src="/scripts/calculadora.js"></script>
+</body>
+</html>

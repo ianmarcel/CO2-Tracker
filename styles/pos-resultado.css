@@ -1,0 +1,41 @@
+*{
+    margin: 0 auto;
+    padding: 0 auto;
+    background-color:  rgb(166, 219, 166);
+}
+
+.main{
+    background-color:green;
+    padding: auto;
+    font-size: 2000px;
+}
+
+
+.tabela{
+    text-decoration: none;
+    font-size: x-large;
+    color: white;
+    margin: 10px;
+    text-align: center;
+}
+.footer{
+    background-color: rgb(88, 161, 88);
+    padding: 30px;
+}
+.tabela h1{
+    background-color: rgb(88, 161, 88);
+    align-items: center;
+}
+.video h2{
+    color: white;
+}
+.br{
+    color:red;
+}
+.bra{
+    color:red;
+}
+#linkfinal{
+    font-size: x-large;
+
+}
